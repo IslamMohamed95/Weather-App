@@ -359,6 +359,10 @@ footer {
     width: 60%;
   }
 
+  .search-bar {
+    margin-bottom: 5% !important;
+  }
+
   .tabSize {
     width: 60%;
     padding: 5%;
