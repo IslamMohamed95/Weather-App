@@ -77,7 +77,7 @@ function App() {
       <div id="Default">
         <nav>
           <h1>LoOma</h1>
-          <h1>Demo</h1>
+          <h1>DemO</h1>
         </nav>
         <main>
           <div className="search-box">
