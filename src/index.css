@@ -31,8 +31,10 @@
   transition: 0.3s ease-out;
 }
 
-#cloud {
-  width: 35%;
+#cloud,
+#mist {
+  padding: 5% 0;
+  width: 80%;
   animation: weather2 0.7s linear 0s infinite alternate;
 }
 
@@ -46,7 +48,7 @@
 }
 
 #clear {
-  width: 35%;
+  width: 80%;
   animation: weather1 5s linear 0s infinite forwards;
 }
 
@@ -106,7 +108,28 @@ footer {
     );
   }
 
+  .mobSize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px !important;
+    padding: 10% 0;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .mobSize hr {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    margin: 5% 0;
+    width: 80%;
+    text-align: center;
+  }
+
   .search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 0 0 20%;
   }
@@ -130,11 +153,16 @@ footer {
   }
 
   .location-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .location-box .location {
-    color: rgb(245, 48, 48);
+    color: rgb(236, 57, 57);
     margin-bottom: 5px;
     font-weight: 500;
     font-size: 32px;
@@ -150,27 +178,29 @@ footer {
 
   .weather-box {
     text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .weather-box .temp {
     position: relative;
     display: inline-block;
-    margin: 30px auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 25px;
-    font-size: 35px;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-    font-weight: 500;
+
+    font-size: 30px;
+    color: rgb(47, 47, 66);
+    font-weight: bold;
+
     border-radius: 20px;
-    color: white;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
   }
 
   .weather-box .weather {
-    color: white;
+    display: flex;
+    color: rgba(255, 255, 255, 0.7);
     font-weight: bolder;
-    font-size: 40px;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    font-size: 25px;
   }
 }
 

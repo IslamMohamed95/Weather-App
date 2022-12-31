@@ -55,7 +55,7 @@ function App() {
       } else if (result.data.weather[0].main === "Clouds") {
         setMain(<img id="cloud" src={clearSky} alt={clearSky} />);
       } else if (result.data.weather[0].main === "Mist") {
-        setMain(<img id="cloud" src={Mist} alt={clearSky} />);
+        setMain(<img id="mist" src={Mist} alt={clearSky} />);
       }
     }
   };
@@ -114,24 +114,27 @@ function App() {
               </React.Fragment>
             ) : (
               <React.Fragment>
-                <div>
+                <div className="mobSize">
                   <div className="location-box">
                     <div className="location">
                       {weather.sys.country}, {weather.name}
                     </div>
+                    <hr />
                     <div className="date">{dateBuilder(new Date())}</div>
                   </div>
+                  <hr />
 
                   <div className="weather-box">
                     <div className="temp">
                       {Math.round(weather.main.temp)}
                       <span>&#8451;</span>
                     </div>
-                    <div>{main}</div>
-
+                    <hr />
                     <div className="weather">
                       {weather.weather[0].description}
                     </div>
+                    <hr />
+                    <div>{main}</div>
                   </div>
                 </div>
               </React.Fragment>
